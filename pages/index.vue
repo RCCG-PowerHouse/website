@@ -1,18 +1,18 @@
 <template>
   <!-- HERO TEXT SECTION -->
-  <section class="hero-section border grid content-center">
-    <div>
-      <p class="hero pb-10">
+  <section class="hero-section flex justify-between items-center p-10">
+    <div class="hero-text">
+      <p class="hero pb-10 w-4/5">
         Experience The Warmth of Fellowship, Worship, And The Joy of Serving
         Together
       </p>
-      <p class="w-4/5 pb-10">
+      <p class="w-2/4 pb-10 leading-normal">
         Welcome to Powerhouse where everyone is welcome come as you are, and
         let's walk this inspiring path of faith, love, and purpose.. Join us
         today...
       </p>
       <UButton
-        label="Watch Live Stream/Achive"
+        label="Watch Live Stream/Archive"
         :ui="{ rounded: 'rounded-full' }"
         variant="outline"
         size="xl"
@@ -20,20 +20,27 @@
     </div>
   </section>
   <!-- VISION SECTION -->
-  <section class="vision border grid content-center grid-cols-1 gap-2">
-    <div class="">Vision</div>
-    <div class="col-span-2">
-      <p class="font-medium uppercase" style="color: #f34032">What We See</p>
-      <p class="border text-left leading-7 w-4/5">
-        Empowered by Faith, United in Love, and Committed to Service, Power
-        House envisions a vibrant community where individuals discover and
-        deepen their relationship with God. Striving for spiritual growth and
-        embracing diversity, we aspire to be a beacon of hope, extending
-        compassion and making a positive impact on the lives of those we touch.
-        Together, we journey towards a shared vision of a transformed and
-        uplifted world, guided by the teachings of Christ and bound by the bonds
-        of love.
-      </p>
+  <section class="vision flex justify-between">
+    <div class="flex items-center justify-center">
+      <div class="vision-text vision-hero px-3">
+        <p>Vision</p>
+      </div>
+      <div class="grid content-center w-4/5">
+        <p class="font-medium uppercase" style="color: #f34032">What We See</p>
+        <p class="text-left leading-7 w-4/5">
+          Empowered by Faith, United in Love, and Committed to Service, Power
+          House envisions a vibrant community where individuals discover and
+          deepen their relationship with God. Striving for spiritual growth and
+          embracing diversity, we aspire to be a beacon of hope, extending
+          compassion and making a positive impact on the lives of those we
+          touch. Together, we journey towards a shared vision of a transformed
+          and uplifted world, guided by the teachings of Christ and bound by the
+          bonds of love.
+        </p>
+      </div>
+    </div>
+    <div class="vision-text mission-hero py-5">
+      <p>Mission</p>
     </div>
   </section>
   <!-- ARTCILES SECTION -->
@@ -53,9 +60,11 @@
   </section>
   <!-- FAQ'S SECTION -->
   <section class="border grid grid-cols-3 gap-2 content-center">
-    <div>FAQ'S</div>
+    <div class="flex items-center justify-center faq-hero vision-text">
+      FAQ'S
+    </div>
     <div class="grid grid-cols-1 grid-rows-5 col-span-2 gap-1">
-      <div class="font-semibold">QUESTIONS YOU MAY HAVE.</div>
+      <div class="font-semibold headers">QUESTIONS YOU MAY HAVE.</div>
       <div class="font-bold">
         <p class="py-1">
           How can I get involved in church activities and events?
@@ -110,21 +119,79 @@
       allowfullscreen
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-      class="w-full"
     ></iframe>
   </section>
 </template>
 
 <style scoped>
 .hero {
-  font-size: 52px;
+  font-size: 70px;
   font-weight: 700;
   line-height: 62px;
-  letter-spacing: -0.02em;
   text-align: left;
+  background: -webkit-linear-gradient(#e92616, #d0bd06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headers {
+  background-color: #e92616;
+  background-image: linear-gradient(to right, #e92616 0%, #d0bd06 55%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+}
+
+.hero-section {
+  height: 80vh;
+  background-image: url("image.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: rgba(250, 249, 249, 1);
+}
+
+.button {
+  color: #3f241c;
 }
 
 .vision {
-  height: 30vh;
+  height: 40vh;
+  background-image: radial-gradient(#3b1e0deb 100%, #51181300 100%),
+    url("vision.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.vision-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 100px;
+  letter-spacing: -0.02em;
+}
+
+.vision-hero {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #9e5b5b;
+}
+
+.mission-hero {
+  font-size: 90px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #a67575;
+}
+
+.faq-hero {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #9e5b5b;
 }
 </style>

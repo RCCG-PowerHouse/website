@@ -1,5 +1,5 @@
 <template>
-  <div class="default-layout">
+  <div>
     <UHorizontalNavigation :links="links" />
     <slot />
   </div>
@@ -33,16 +33,15 @@ const links = [
 </script>
 
 <style>
-/* body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+body {
+  background-color: white;
+  color: black;
+  font-family: Outfit;
 }
 
 footer {
   margin-top: auto;
-} */
-
+}
 section {
   height: 50vh;
   padding: 0 7%;
