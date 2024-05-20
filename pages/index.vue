@@ -1,6 +1,6 @@
 <template>
   <!-- HERO TEXT SECTION -->
-  <section class="hero-section flex justify-between items-center p-10">
+  <section class="hero-section flex justify-between items-center">
     <div class="hero-text">
       <p class="hero pb-10 w-4/5">
         Experience The Warmth of Fellowship, Worship, And The Joy of Serving
@@ -44,58 +44,67 @@
     </div>
   </section>
   <!-- ARTCILES SECTION -->
-  <section class="border grid grid-cols-1 grid-rows-3 gap-2">
-    <p class="font-semibold border flex justify-center items-center">
+  <section class="grid grid-cols-1 grid-rows-6 gap-2 article">
+    <div
+      class="font-semibold flex justify-center items-center headers row-span-1"
+    >
       OUR POPULAR ARTICLES
-    </p>
-    <div class="grid grid-cols-3 grid-rows-3 gap-2 justify-items-stretch">
-      <div class="border rounded">01</div>
-      <div class="border">02</div>
-      <div class="border">03</div>
-      <div class="border">04</div>
-      <div class="border">05</div>
-      <div class="border">06</div>
     </div>
-    <p class="border">View All Articles</p>
+    <div class="flex justify-between gap-2 row-span-2">
+      <div class="grow rounded-lg article-1 article-card">01</div>
+      <div class="grow rounded-lg article-2 article-card">02</div>
+      <div class="grow rounded-lg article-2 article-card">03</div>
+    </div>
+    <div class="flex justify-between gap-2 row-span-2">
+      <div class="grow rounded-lg article-3 article-card">04</div>
+      <div class="grow rounded-lg article-4 article-card">05</div>
+    </div>
+    <p class="justify-self-center m-2 headers">View All Articles</p>
   </section>
   <!-- FAQ'S SECTION -->
-  <section class="border grid grid-cols-3 gap-2 content-center">
+  <section class="grid grid-cols-3 gap-2 content-center faq py-4">
     <div class="flex items-center justify-center faq-hero vision-text">
       FAQ'S
     </div>
-    <div class="grid grid-cols-1 grid-rows-5 col-span-2 gap-1">
-      <div class="font-semibold headers">QUESTIONS YOU MAY HAVE.</div>
-      <div class="font-bold">
-        <p class="py-1">
+    <div class="flex flex-col col-span-2 gap-4">
+      <div class="font-semibold headers row-span-1">
+        Questions You May Have.
+      </div>
+      <div class="flex flex-col gap-1">
+        <p class="font-black text-lg">
           How can I get involved in church activities and events?
         </p>
-        <p class="font-light">
+        <span class="font-thin">
           We encourage everyone to get involved! Visit our "Get Involved" page
           for information on upcoming events, volunteer opportunities, and ways
           to join community groups.
-        </p>
+        </span>
       </div>
 
-      <div class="font-bold">
-        How can I donate to the church online?
-        <p class="font-light">
+      <div class="flex flex-col gap-1 mb-1">
+        <p class="font-black text-lg">How can I donate to the church online?</p>
+        <p class="font-thin">
           Donating online is easy! Visit our "Give" page, where you can securely
           make a one-time donation or set up recurring contributions.
         </p>
       </div>
 
-      <div class="font-bold">
-        What programs do you have for children and youth?
-        <p class="font-light">
+      <div class="flex flex-col gap-1 mb-1">
+        <p class="font-black text-lg">
+          What programs do you have for children and youth?
+        </p>
+        <p class="font-thin">
           We have vibrant programs for children and youth! Explore our
           "Ministries" section to learn about Sunday School, youth groups, and
           special events tailored for various age groups.
         </p>
       </div>
 
-      <div class="font-bold">
-        How can I request prayer for myself or a loved one?
-        <p class="font-light">
+      <div class="flex flex-col gap-1 mb-1">
+        <p class="font-black text-lg">
+          How can I request prayer for myself or a loved one?
+        </p>
+        <p class="font-thin">
           Submitting a prayer request is simple. Visit our "Prayer Requests"
           page and fill out the form with your details.
         </p>
@@ -103,9 +112,9 @@
     </div>
   </section>
   <!-- MAPS SECTION -->
-  <section class="border">
-    <div>
-      <p>WE ARE CLOSER THAN YOU IMAGINE!</p>
+  <section class="flex flex-col justify-content items-center maps">
+    <div class="py-4">
+      <p class="headers font-black">We are Closer Than You Imagined!</p>
       <p>
         Join the community where distance is just a concept, and togetherness is
         a reality
@@ -113,12 +122,11 @@
     </div>
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2284.685739676587!2d3.3807942168969403!3d6.550135856110031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8d9e0e909475%3A0x899f3ffa902b3303!2sThe%20Redeemed%20Christian%20Church%20Of%20God%2C%20Christ%20Church!5e0!3m2!1sen!2sng!4v1709078309034!5m2!1sen!2sng"
-      width="600"
-      height="400"
       style="border: 0"
       allowfullscreen
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
+      class="w-9/12 h-4/5 rounded-lg"
     ></iframe>
   </section>
 </template>
@@ -190,8 +198,44 @@
   -webkit-text-stroke-color: #a67575;
 }
 
+.article {
+  background-color: #faf9f9;
+  height: 70vh;
+}
+
+.article-card {
+  background-image: linear-gradient(#51181300, #3b1e0da6);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.article-1 {
+  background-image: url("article-1.png");
+}
+
+.article-2 {
+  background-image: url("article-2.png");
+}
+
+.article-3 {
+  background-image: url("article-3.png");
+}
+
+.article-4 {
+  background-image: url("article-4.png");
+}
+
+.faq {
+  background-color: #f9f0ee80;
+}
+
 .faq-hero {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #9e5b5b;
+}
+
+.maps {
+  height: 50vh;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <footer>
+  <footer style="border: 1px solid red" class="mt-20">
     <div
-      class="bg-white w-9/12 max-w-7xl mx-auto bg-white rounded-sm border -mt-9 top py-3"
+      class="bg-white w-9/12 max-w-7xl mx-auto bg-white rounded-lg border -mt-9 top py-3"
     >
       <UHorizontalNavigation :links="links" />
     </div>
@@ -40,7 +40,9 @@
       </div>
     </section>
 
-    <div class="flex py-4 justify-center font-semibold bg-white text-black">
+    <div
+      class="flex border py-4 justify-center font-semibold bg-white text-black"
+    >
       <p>
         <Icon name="i-ic:outline-copyright" />
         Copyright Rccg PowerHouse

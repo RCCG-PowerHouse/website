@@ -1,6 +1,6 @@
 <template>
   <div>
-    <UHorizontalNavigation :links="links" />
+    <UHorizontalNavigation :links="links" class="px-8" />
     <slot />
   </div>
   <Footer />
@@ -44,9 +44,6 @@ footer {
 }
 section {
   height: 50vh;
-  padding: 0 7%;
-}
-p {
-  font-weight: 100;
+  padding: 0 5%;
 }
 </style>
