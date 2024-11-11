@@ -12,7 +12,11 @@ const route = useRoute();
 const links = [
   [
     {
-      label: "PHLogo",
+      avatar: {
+        src: "/PHWLogoYes.png",
+        size: "xl",
+        as: "img",
+      },
     },
   ],
   [

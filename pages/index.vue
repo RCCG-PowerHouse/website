@@ -240,7 +240,6 @@
 }
 
 .faq {
-  max-height: 80vh;
   min-height: max-content;
   background-color: #f9f0ee80;
 }
