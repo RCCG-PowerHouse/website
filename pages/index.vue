@@ -1,12 +1,14 @@
 <template>
   <!-- HERO TEXT SECTION -->
-  <section class="hero-section flex justify-between items-center">
-    <div class="hero-text">
-      <h1 class="hero pb-10 w-4/5">
+  <section
+    class="hero-section flex flex-col-reverse md:flex-row md:justify-between items-center py-10"
+  >
+    <div class="hero-text text-justify md:text-left">
+      <h1 class="hero pb-10 w-full">
         Experience The Warmth of Fellowship, Worship, And The Joy of Serving
         Together
       </h1>
-      <p class="w-2/4 pb-10 leading-normal">
+      <p class="pb-10 leading-normal">
         Welcome to Powerhouse where everyone is welcome come as you are, and
         let's walk this inspiring path of faith, love, and purpose.. Join us
         today...
@@ -19,17 +21,18 @@
         size="xl"
       />
     </div>
+    <img src="/image.png" />
   </section>
 
   <!-- VISION SECTION -->
-  <section class="vision flex justify-between">
-    <div class="flex items-center justify-center">
-      <div class="vision-text vision-hero px-3">
+  <section class="vision flex flex-col justify-between lg:flex-row">
+    <div class="flex items-center justify-center flex-col lg:flex-row md:py-10">
+      <div class="vision-text vision-hero md:px-3">
         <p>Vision</p>
       </div>
-      <div class="grid content-center w-4/5">
+      <div class="grid content-center w-full lg:w-4/5">
         <p class="font-medium uppercase" style="color: #f34032">What We See</p>
-        <p class="text-left leading-wide w-4/5">
+        <p class="text-left leading-wide lg:w-4/5">
           Empowered by Faith, United in Love, and Committed to Service, Power
           House envisions a vibrant community where individuals discover and
           deepen their relationship with God. Striving for spiritual growth and
@@ -40,9 +43,10 @@
           bonds of love.
         </p>
       </div>
-    </div>
-    <div class="vision-text mission-hero py-5">
-      <p>Mission</p>
+
+      <div class="vision-text mission-hero">
+        <p id="mission-hero">Mission</p>
+      </div>
     </div>
   </section>
 
@@ -66,10 +70,16 @@
   </section>
 
   <!-- FAQ'S SECTION -->
-  <section class="grid grid-cols-3 gap-2 content-center faq py-4">
-    <p class="flex items-center justify-center faq-hero vision-text">FAQ'S</p>
-    <div class="flex flex-col col-span-2 gap-8">
-      <h4 class="font-semibold headers row-span-1">Questions You May Have.</h4>
+  <section
+    class="flex flex-col gap-10 content-center faq py-4 lg:flex-row lg:justify-around"
+  >
+    <p class="flex items-center justify-center faq-hero vision-text grow">
+      FAQ'S
+    </p>
+    <div class="flex flex-col col-span-2 gap-8 md:w-[90%] flex-none">
+      <h4 class="font-semibold headers row-span-1 hidden lg:block">
+        Questions You May Have.
+      </h4>
       <div class="flex flex-col gap-1">
         <p class="font-black text-lg">
           How can I get involved in church activities and events?
@@ -137,7 +147,6 @@
 
 .hero {
   line-height: 1em;
-  text-align: left;
   background: linear-gradient(to right, #e92616, #d0bd06);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -155,10 +164,10 @@
 
 .hero-section {
   height: 100vh;
-  background-image: url("image.png");
+  /* background-image: url("image.png");
   background-repeat: no-repeat;
   background-position: right;
-  background-color: rgba(250, 249, 249, 1);
+  background-color: rgba(250, 249, 249, 1); */
 }
 
 .button {
@@ -166,7 +175,7 @@
 }
 
 .vision {
-  height: 50vh;
+  height: max-content;
   background-image: radial-gradient(
       238.5% 957.83% at 37.26% 48.1%,
       rgba(59, 30, 13, 0.92) 0%,
@@ -197,7 +206,6 @@
 }
 
 .mission-hero {
-  font-size: 90px;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #a67575;
@@ -232,7 +240,8 @@
 }
 
 .faq {
-  height: 80vh;
+  max-height: 80vh;
+  min-height: max-content;
   background-color: #f9f0ee80;
 }
 
@@ -243,5 +252,16 @@
 
 .maps {
   height: 80vh;
+}
+
+@media screen and (max-width: 1023px) {
+  .vision-text {
+    writing-mode: vertical-rl;
+    transform: rotate(-90deg);
+  }
+
+  #mission-hero {
+    font-size: 50px;
+  }
 }
 </style>

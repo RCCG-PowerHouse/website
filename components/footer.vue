@@ -6,11 +6,15 @@
       <UHorizontalNavigation :links="links" />
     </div>
 
-    <section class="main flex justify-around max-h-1/2">
-      <div class="flex-col flex justify-around font-medium">
+    <section
+      class="main grid grid-cols-2 gap-10 md:flex md:justify-around justify-center auto-rows-max"
+    >
+      <div class="md:flex-col flex justify-around font-medium col-span-2">
         <Icon name="i-uiw:twitter" />
         <Icon name="i-bxl:facebook" />
-        <Icon name="i-bxl:instagram-alt" />
+        <a href="https://www.instagram.com/rccgpowerhouse"
+          ><Icon name="i-bxl:instagram-alt"
+        /></a>
       </div>
 
       <div class="flex-col flex text-sm justify-between col">
@@ -65,7 +69,7 @@ footer {
 }
 
 .main {
-  padding: 10% 5%;
+  padding: 8% 5%;
 }
 
 .top {

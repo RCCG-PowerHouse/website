@@ -29,3 +29,7 @@ p {
   /* font-family: "Quicksand"; */
   font-weight: 100;
 }
+
+.vision-text {
+  writing-mode: horizontal-tb;
+}
