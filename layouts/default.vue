@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <UHorizontalNavigation :links="links" class="px-8" />
+  <UHorizontalNavigation :links="links" class="px-8" />
+  <main>
     <slot />
-  </div>
+  </main>
   <Footer />
 </template>
 

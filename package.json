@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.14.1",
+    "@vueuse/motion": "^2.2.6",
     "nuxt": "^3.10.3",
     "radix-vue": "^1.4.9",
     "vue": "^3.4.19",

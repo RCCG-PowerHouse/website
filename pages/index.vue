@@ -2,10 +2,10 @@
   <!-- HERO TEXT SECTION -->
   <section class="hero-section flex justify-between items-center">
     <div class="hero-text">
-      <p class="hero pb-10 w-4/5">
+      <h1 class="hero pb-10 w-4/5">
         Experience The Warmth of Fellowship, Worship, And The Joy of Serving
         Together
-      </p>
+      </h1>
       <p class="w-2/4 pb-10 leading-normal">
         Welcome to Powerhouse where everyone is welcome come as you are, and
         let's walk this inspiring path of faith, love, and purpose.. Join us
@@ -14,11 +14,13 @@
       <UButton
         label="Watch Live Stream/Archive"
         :ui="{ rounded: 'rounded-full' }"
+        style="color: #3f241c; background-color: white"
         variant="outline"
         size="xl"
       />
     </div>
   </section>
+
   <!-- VISION SECTION -->
   <section class="vision flex justify-between">
     <div class="flex items-center justify-center">
@@ -27,7 +29,7 @@
       </div>
       <div class="grid content-center w-4/5">
         <p class="font-medium uppercase" style="color: #f34032">What We See</p>
-        <p class="text-left leading-7 w-4/5">
+        <p class="text-left leading-wide w-4/5">
           Empowered by Faith, United in Love, and Committed to Service, Power
           House envisions a vibrant community where individuals discover and
           deepen their relationship with God. Striving for spiritual growth and
@@ -43,13 +45,14 @@
       <p>Mission</p>
     </div>
   </section>
+
   <!-- ARTCILES SECTION -->
   <section class="grid grid-cols-1 grid-rows-6 gap-2 article">
-    <div
+    <h4
       class="font-semibold flex justify-center items-center headers row-span-1"
     >
       OUR POPULAR ARTICLES
-    </div>
+    </h4>
     <div class="flex justify-between gap-2 row-span-2">
       <div class="grow rounded-lg article-1 article-card">01</div>
       <div class="grow rounded-lg article-2 article-card">02</div>
@@ -59,26 +62,23 @@
       <div class="grow rounded-lg article-3 article-card">04</div>
       <div class="grow rounded-lg article-4 article-card">05</div>
     </div>
-    <p class="justify-self-center m-2 headers">View All Articles</p>
+    <p class="justify-self-center m-2 headers text-2xl">View All Articles</p>
   </section>
+
   <!-- FAQ'S SECTION -->
   <section class="grid grid-cols-3 gap-2 content-center faq py-4">
-    <div class="flex items-center justify-center faq-hero vision-text">
-      FAQ'S
-    </div>
-    <div class="flex flex-col col-span-2 gap-4">
-      <div class="font-semibold headers row-span-1">
-        Questions You May Have.
-      </div>
+    <p class="flex items-center justify-center faq-hero vision-text">FAQ'S</p>
+    <div class="flex flex-col col-span-2 gap-8">
+      <h4 class="font-semibold headers row-span-1">Questions You May Have.</h4>
       <div class="flex flex-col gap-1">
         <p class="font-black text-lg">
           How can I get involved in church activities and events?
         </p>
-        <span class="font-thin">
+        <p class="font-thin">
           We encourage everyone to get involved! Visit our "Get Involved" page
           for information on upcoming events, volunteer opportunities, and ways
           to join community groups.
-        </span>
+        </p>
       </div>
 
       <div class="flex flex-col gap-1 mb-1">
@@ -111,10 +111,11 @@
       </div>
     </div>
   </section>
+
   <!-- MAPS SECTION -->
   <section class="flex flex-col justify-content items-center maps">
-    <div class="py-4">
-      <p class="headers font-black">We are Closer Than You Imagined!</p>
+    <div class="py-10 text-center">
+      <h4 class="headers font-black">We are Closer Than You Imagined!</h4>
       <p>
         Join the community where distance is just a concept, and togetherness is
         a reality
@@ -126,34 +127,34 @@
       allowfullscreen
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-      class="w-9/12 h-4/5 rounded-lg"
+      class="w-9/12 h-[75%] rounded-lg"
     ></iframe>
   </section>
 </template>
 
-<style scoped>
+<style>
+@import url("base.css");
+
 .hero {
-  font-size: 70px;
-  font-weight: 700;
-  line-height: 62px;
+  line-height: 1em;
   text-align: left;
-  background: -webkit-linear-gradient(#e92616, #d0bd06);
+  background: linear-gradient(to right, #e92616, #d0bd06);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .headers {
   background-color: #e92616;
-  background-image: linear-gradient(to right, #e92616 0%, #d0bd06 55%);
+  /* background-image: linear-gradient(to right, #e92616 0%, #d0bd06 55%); */
+  background-image: linear-gradient(90.49deg, #e92616 -14.37%, #d0bd06 97.24%);
+  font-weight: 900;
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 30px;
 }
 
 .hero-section {
-  height: 80vh;
+  height: 100vh;
   background-image: url("image.png");
   background-repeat: no-repeat;
   background-position: right;
@@ -165,8 +166,12 @@
 }
 
 .vision {
-  height: 40vh;
-  background-image: radial-gradient(#3b1e0deb 100%, #51181300 100%),
+  height: 50vh;
+  background-image: radial-gradient(
+      238.5% 957.83% at 37.26% 48.1%,
+      rgba(59, 30, 13, 0.92) 0%,
+      rgba(81, 24, 19, 0) 100%
+    ),
     url("vision.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -200,7 +205,7 @@
 
 .article {
   background-color: #faf9f9;
-  height: 70vh;
+  height: 100vh;
 }
 
 .article-card {
@@ -227,15 +232,16 @@
 }
 
 .faq {
+  height: 80vh;
   background-color: #f9f0ee80;
 }
 
 .faq-hero {
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: #9e5b5b;
 }
 
 .maps {
-  height: 50vh;
+  height: 80vh;
 }
 </style>

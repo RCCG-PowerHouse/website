@@ -1,7 +1,7 @@
 <template>
-  <footer style="border: 1px solid red" class="mt-20">
+  <footer class="mt-20" style="border: 1px solid transparent">
     <div
-      class="bg-white w-9/12 max-w-7xl mx-auto bg-white rounded-lg border -mt-9 top py-3"
+      class="bg-white w-9/12 max-w-7xl mx-auto rounded-lg border -mt-9 top py-3"
     >
       <UHorizontalNavigation :links="links" />
     </div>
@@ -14,10 +14,15 @@
       </div>
 
       <div class="flex-col flex text-sm justify-between col">
-        <p>Redemption Crescent, Ups <br />Gbagada Lagos</p>
-        <span class="text-xs underline">Location</span>
-        <p>081 486 674 84,</p>
-        <span class="text-xs underline">Contact Us</span>
+        <div>
+          <p class="py-2">Redemption Crescent, Ups <br />Gbagada Lagos</p>
+          <span class="text-md underline">Location</span>
+        </div>
+
+        <div>
+          <p class="py-2">0814 866 7484</p>
+          <span class="text-md underline">Contact Us</span>
+        </div>
       </div>
 
       <div class="flex-col flex text-sm justify-between">
@@ -33,7 +38,7 @@
         <p>Upcoming Events</p>
       </div>
 
-      <div class="flex-col flex text-sm justify-start">
+      <div class="flex-col flex text-sm justify-between">
         <p>Our Service times</p>
         <p>Sunday</p>
         <p>Wednesdays</p>
